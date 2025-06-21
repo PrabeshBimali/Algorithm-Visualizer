@@ -207,7 +207,6 @@ export default function PathfindingAlgorithms() {
                 </div>
             </div>
             <div className=' text-amber-50 flex flex-col items-center justify-center'>
-                /* grid-cols is hardcoded for now */
                 <div className={`grid bg-gray-600 
                                 ${GRID === 5 ? "grid-cols-5" : GRID === 10 ? "grid-cols-10" : GRID === 25 ? "grid-cols-25" : GRID === 40 ? "grid-cols-40" : "grid-cols-50"}`}>
                     {cells.map((cell, index) => {

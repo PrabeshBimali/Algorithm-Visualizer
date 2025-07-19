@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { generatePath } from './lib/generatePath';
 import { generateMaze } from './lib/generateMaze';
+import Link from 'next/link';
 
 export default function PathfindingAlgorithms() {
     const [GRID, setGRID] = useState(5);
@@ -172,6 +173,7 @@ export default function PathfindingAlgorithms() {
 
     return (
         <>  
+            <Link href="/" className='p-3 text-xl cursor-pointer hover:text-cyan-500'>Go Back</Link>
             <div className='mt-5 flex justify-center'>
                 <div className='flex flex-col md:flex-row gap-3 text-gray-500'>
                     <div className='flex flex-row justify-center items-center gap-3'>
@@ -206,7 +208,7 @@ export default function PathfindingAlgorithms() {
                     </div>
                 </div>
             </div>
-            <div className=' text-amber-50 flex flex-col items-center justify-center'>
+            <div className=' text-amber-50 flex flex-col items-center justify-center mt-5'>
                 <div className={`grid bg-gray-600 
                                 ${GRID === 5 ? "grid-cols-5" : GRID === 10 ? "grid-cols-10" : GRID === 25 ? "grid-cols-25" : GRID === 40 ? "grid-cols-40" : "grid-cols-50"}`}>
                     {cells.map((cell, index) => {
